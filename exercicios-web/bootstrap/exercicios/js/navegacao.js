@@ -7,16 +7,20 @@
 
         const destino = document.querySelector('[wm-link-destino]')
 
-        const url = hash.substring(1)
-        fetch(url)
-            .then(resp => resp.text())
-            .then(html => {
-                destino.innerHTML = html
-                const resultado = html.match(/\<script\>([\s\S]*)\<\/script\>/)
-                if(resultado && resultado.length >= 2) {
-                    eval(resultado[1])
-                }
-            })
+        //const url = hash.substring(1)
+        const url = 'bootstrap/exercicios/paginas/grid.html';
+        console.log(url);
+        fetch(url).then(console.log('certo'));
+        // fetch(url)
+        //     .then(resp => resp.text())
+        //     .then(html => {
+        //         destino.innerHTML = html
+        //         const resultado = html.match(/\<script\>([\s\S]*)\<\/script\>/)
+        //         if(resultado && resultado.length >= 2) {
+        //             eval(resultado[1])
+        //         }
+        //     })
+        //     .catch(resp => console.log('tretado'));
     }
 
     function configurarLinks() {
