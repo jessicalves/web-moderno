@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --color --progress --inline --hot",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
