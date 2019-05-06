@@ -56,15 +56,15 @@
         $('div p span').addClass('destaque')
 
         // Exclusivos jQuery
-        $('li:first').css('border', 'solid 3px yellow')
-        $('li:odd').css('border', 'solid 10px orange')
-        $('li:gt(1)').css('border', 'solid 10px white')
-        $('li:not(:last)').css('border', 'none')
-        $('li:contains("r")').css('background-color', 'black')
+        $('li:first').css('border', 'solid 3px yellow') // o primeiro elemento
+        $('li:odd').css('border', 'solid 10px orange') // elementos impares
+        $('li:gt(1)').css('border', 'solid 10px white') // maior que > '1'
+        $('li:not(:last)').css('border', 'none') // last é o ultimo. porem vai pega os Li que não é o ultimo
+        $('li:contains("r")').css('background-color', 'black') // dentro de um determinado elemento contém? a letra 'r' no caso
 
-        $('form *').hide()
-        $('form :text').show()
-        $('form :password').show()
+        $('form *').hide() // função hide() esconde do html
+        $('form :text').show() // faz aparecer o elemento
+        $('form :password').show() 
         $('form :checkbox').show()
         $('form :radio').show()
         $('form :file').show()
