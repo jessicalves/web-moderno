@@ -33,7 +33,7 @@
             $elemento.append(horaCerta, botaoMenos, botaoMais)
 
             const getIntervaloAtual =
-                () => parseInt($elemento.attr('wm-relogio'))
+                () => parseInt($elemento.attr('wm-relogio')) // attr esta lendo o valor do atributo wm-relogio
 
             let temporizador = null
             const iniciar = () => {
@@ -44,8 +44,8 @@
             }
 
             const alterarIntervalo = delta => {
-                const novo = Math.max(getIntervaloAtual() + delta, 1000)
-                $elemento.attr('wm-relogio', novo)
+                const novo = Math.max(getIntervaloAtual() + delta, 1000) //pega o maior valor entre os dois
+                $elemento.attr('wm-relogio', novo) // attr está modificando o valor do atributo wm-relogio
                 iniciar()
             }
 
@@ -56,9 +56,9 @@
 
         $('[wm-relogio]').each((i, e) => new Relogio(e))
 
-        // $('[wm-relogio]').attr('opa') // ler
-        // $('[wm-relogio]').attr('opa', 3) // alterar ou incluir
-        $('[wm-relogio]').attr({ opa: 1, novo: true })
+        // $('[wm-relogio]').attr('opa') // ler o atribulo
+        // $('[wm-relogio]').attr('opa', 3) // alterar ou incluir um novo atributo
+        $('[wm-relogio]').attr({ opa: 1, novo: true }) //incluindo varios atributos a partir de um objeto
         $('[wm-relogio]').removeAttr('opa').removeAttr('novo')
     </script>
 </body>

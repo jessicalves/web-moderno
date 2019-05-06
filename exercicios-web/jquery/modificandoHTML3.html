@@ -14,7 +14,7 @@
 
     <script>
         // $(document).ready(function() {
-        $(function() {
+        $(function() { //chama a função quando o documento está pronto 
             const alunos = [
                 { nome: 'Ana', nota: 9.1 },
                 { nome: 'Bianca', nota: 8.4 },
@@ -22,6 +22,11 @@
                 { nome: 'Julia', nota: 9.7 }
             ]
 
+            // const linhas = alunos.forEach(aluno => {
+            //     const tdNome = $('<td>').html(aluno.nome)
+            //     const tdNota = $('<td>').html(aluno.nota)
+            //     return $('<tr>').append(tdNome, tdNota)
+            // })
             const linhas = alunos.map(aluno => {
                 const tdNome = $('<td>').html(aluno.nome)
                 const tdNota = $('<td>').html(aluno.nota)
@@ -30,7 +35,7 @@
                 return $('<tr>').append(tdNome, tdNota)
             })
 
-            const tabela = $('<table>').append(linhas)
+            const tabela = $('<table>').append(linhas) //cria uma tabela
                 .css('border', 'solid 5px')
             $('#conteudo').append(tabela)
         })
