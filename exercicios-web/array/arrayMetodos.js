@@ -21,7 +21,7 @@ console.log(pilotos)
 pilotos.splice(3, 1) // massa quebrou :(
 console.log(pilotos)
 
-const algunsPilotos1 = pilotos.slice(2) // novo array
+const algunsPilotos1 = pilotos.slice(2) // novo array pegando um pedaço do array
 console.log(algunsPilotos1)
 
 const algunsPilotos2 = pilotos.slice(1, 4)
