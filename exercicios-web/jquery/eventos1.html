@@ -26,11 +26,11 @@
 
         $('body').on('mousemove', mostrarPosicaoMouse)
         
-        $('#posicao').mouseover(e => {
+        $('#posicao').mouseover(e => {//dentro da div o valor de x e y não muda
             $('body').off('mousemove', mostrarPosicaoMouse)
         })
 
-        $('#posicao').mouseleave(e => {
+        $('#posicao').mouseleave(e => { // quando o mause sair da div posição ele volta a mostrar os valores de x e y
             $('body').mousemove(mostrarPosicaoMouse)
         })
 
@@ -41,9 +41,10 @@
 
         const backgroundOriginal = $('body').css('background-color')
 
-        $('input').keyup(function (e) {
+        $('input').keyup(function (e) { //a medida que eu for digitando já pega o valor escrito no input
             const valor = $(this).val()
-            if (valor.match(/#[\da-fA-F]{6}/)
+            console.log(valor)
+            if (valor.match(/#[\da-fA-F]{6}/) // expressão regular, a ate f (minusculo) A até F (maiusculo) 6 ou 3 vezes
                 || valor.match(/#[\da-fA-F]{3}/)) {
                 $('body').css('background-color', valor)
             } else {

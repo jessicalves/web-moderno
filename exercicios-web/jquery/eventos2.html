@@ -24,21 +24,21 @@
 
 
         const alternarDestaque = () => $('#div1').toggleClass('destaque')
-        // $('#div1').on('mouseenter mouseleave', alternarDestaque)
+        // $('#div1').on('mouseenter mouseleave', alternarDestaque) //consegue fazer dois eventos
         $('#div1').hover(alternarDestaque, alternarDestaque)
 
         $('#div1').one('mouseenter', e => alert('Aviso IMPORTANTE: Obrigado!'))
         $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000))
 
         $(window).resize(function(e) {
-            const l = $(window).width()
-            const a = $(window).height()
+            const l = $(window).width() //largura da tela
+            const a = $(window).height() // altura da tela
             $('#resultado1').html(`Largura: ${l} e Altura: ${a}`)
         })
 
         $(':input').select(e => {
-            const inicio = e.target.selectionStart
-            const fim = e.target.selectionEnd
+            const inicio = e.target.selectionStart //inicio da selecao 
+            const fim = e.target.selectionEnd //fim da selecao
             $('#resultado2').html(e.target.value.substring(inicio, fim))
         })
     </script>

@@ -19,7 +19,7 @@
 
         $('#div1').css('font-size', '3em')
         $('#div1').css({ 'font-size': '3.5em', 'color': 'yellow' })
-        $('#div1').css('font-size', function () {
+        $('#div1').css('font-size', function () { // pode passar uma função callback
             return `${2 * 2}em`
         })
 
